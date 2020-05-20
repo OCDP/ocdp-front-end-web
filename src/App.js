@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from './components/telaLogin';
+import Login from './components/tela-login';
 import './App.css';
 import './bootstrap/css/bootstrap.min.css';
 import './css/waves.min.css';

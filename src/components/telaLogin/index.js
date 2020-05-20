@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import logo from "../../images/logo/logo_m.png";
+import base64 from 'base-64';
 
 class Login extends Component {
     constructor(props) {
@@ -13,7 +14,8 @@ class Login extends Component {
         this.entrar = this.entrar.bind(this);
     }
 
-    entrar() {
+    entrar(event) {
+      event.preventDefault();
         /**
          * Criar regra de negócios aqui após logar na API http://api-ocdp.us-east-2.elasticbeanstalk.com:8080/api/usuario/basicauth
          * curl -X GET http://ec2-3-20-202-13.us-east-2.compute.amazonaws.com:8080/api/usuario/byCpf/111.111.111-11"
@@ -44,6 +46,18 @@ class Login extends Component {
          * x-frame-options: DENY
          * x-xss-protection: 1; mode=block
          */
+        const { cpf, senha } = this.state;
+        const authUrl = `http://ec2-3-20-202-13.us-east-2.compute.amazonaws.com:8080/api/usuario/byCpf/${cpf}`;
+        const headers = new Headers();
+        headers.set('Authorization', 'Basic ' + base64.encode(cpf + ':' + senha));
+
+        fetch(authUrl, {
+            method:'GET',
+            headers: headers,
+          }
+        ).then(response => response.json())
+        .then(json => console.log(json));
+
         if (this.state.cpf === '11111111111' && this.state.senha === '123') {
             this.setState({nome: 'Dáurio'});
             this.setState({perfil: ''});
@@ -63,9 +77,9 @@ class Login extends Component {
                             <img src={logo} alt="OCDP - ORAL CANCER DECTECT PROJECT"
                                  title="OCDP - ORAL CANCER DECTECT PROJECT"/>
                             <h3 className="espacoAcima20">Seja bem vindo! Faça o login na sua conta.</h3>
-                            <form id="form" className="m-t espacoAcima20">
+                            <form id="form" onSubmit={this.entrar} className="m-t espacoAcima20">
                                 <div className="form-group espacoAcima10">
-                                    <input type="number" className="form-control"
+                                    <input type="text" className="form-control"
                                            placeholder="CPF" id="cpf" maxLength="11"
                                            value={this.state.cpf}
                                            onChange={(event) => this.setState({cpf: event.target.value})}/>
@@ -81,7 +95,7 @@ class Login extends Component {
                                 <a href="#" className="col-md-6 login-right">Esqueci minha
                                     senha</a>
                                 <br/><br/><br/>
-                                <button onClick={() => this.entrar()}
+                                <button type="submit"
                                         className="btn btn-lg btn-primary col-md-5 linkHover border-radius-login"
                                         id="logar">Login
                                 </button>

@@ -5,9 +5,9 @@ $(function () {
         datasets: [
             {
                 label: "Example dataset",
-                fillColor: "rgba(1,168,254,0.5)",
-                strokeColor: "rgba(1,168,254,1)",
-                pointColor: "rgba(1,168,254,1)",
+                fillColor: "#0398aba6",
+                strokeColor: "#0398AB",
+                pointColor: "#0398AB",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(1,168,254,1)",
@@ -15,12 +15,12 @@ $(function () {
             },
             {
                 label: "Example dataset",
-                fillColor: "rgba(103,197,246,0.5)",
-                strokeColor: "rgba(103,197,246,0.7)",
-                pointColor: "rgba(103,197,246,1)",
+                fillColor: "#0398ab59",
+                strokeColor: "#0398aba6",
+                pointColor: "#0398aba6",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(103,197,246,1)",
+                pointHighlightStroke: "#0398AB",
                 data: [28, 48, 40, 19, 86, 27, 90]
             }
         ]
@@ -52,18 +52,18 @@ $(function () {
         datasets: [
             {
                 label: "My First dataset",
-                fillColor: "rgba(1,168,254,0.5)",
-                strokeColor: "rgba(1,168,254,0.8)",
-                highlightFill: "rgba(1,168,254,0.75)",
-                highlightStroke: "rgba(1,168,254,1)",
+                fillColor: "#0398aba6",
+                strokeColor: "#0398AB",
+                highlightFill: "#0398ab59",
+                highlightStroke: "#FFF",
                 data: [65, 59, 80, 81, 56, 55, 40]
             },
             {
                 label: "My Second dataset",
-                fillColor: "rgba(103,197,246,0.5)",
-                strokeColor: "rgba(103,197,246,0.8)",
-                highlightFill: "rgba(103,197,246,0.75)",
-                highlightStroke: "rgba(103,197,246,1)",
+                fillColor: "#0398ab59",
+                strokeColor: "#0398aba6",
+                highlightFill: "#0398ab59",
+                highlightStroke: "#FFF",
                 data: [28, 48, 40, 19, 86, 27, 90]
             }
         ]
@@ -89,20 +89,20 @@ $(function () {
     var polarData = [
         {
             value: 300,
-            color: "#01a8fe",
-            highlight: "#01a8fe",
+            color: "#0398AB",
+            highlight: "#0398AB",
             label: "App"
         },
         {
             value: 140,
-            color: "#9ed7f4",
-            highlight: "#01a8fe",
+            color: "#0398ab59",
+            highlight: "#0398AB",
             label: "Software"
         },
         {
             value: 200,
-            color: "#66b5dd",
-            highlight: "#01a8fe",
+            color: "#0398aba6",
+            highlight: "#0398AB",
             label: "Laptop"
         }
     ];
@@ -131,20 +131,20 @@ $(function () {
     var doughnutData = [
         {
             value: 300,
-            color: "#01a8fe",
-            highlight: "#01a8fe",
+            color: "#0398AB",
+            highlight: "#0398AB",
             label: "App"
         },
         {
             value: 50,
-            color: "#4ebbf4",
-            highlight: "#01a8fe",
+            color: "#0398aba6",
+            highlight: "#0398AB",
             label: "Software"
         },
         {
             value: 100,
-            color: "#9ed7f4",
-            highlight: "#01a8fe",
+            color: "#0398ab59",
+            highlight: "#0398AB",
             label: "Laptop"
         }
     ];

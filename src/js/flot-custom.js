@@ -29,7 +29,7 @@ $(function () {
                 color: '#949ba2'
             }
         },
-        colors: ["#01a8fe"],
+        colors: ["#0398AB"],
         grid: {
             color: "#999999",
             hoverable: true,
@@ -78,7 +78,7 @@ $(function () {
                 }
             }
         },
-        colors: ["#01a8fe"],
+        colors: ["#0398AB"],
         grid: {
             color: "#999999",
             hoverable: true,
@@ -128,19 +128,19 @@ $(function () {
     var data = [{
             label: "Sales 1",
             data: 21,
-            color: "#a8ddf8"
+            color: "#0398ab1c"
         }, {
             label: "Sales 2",
             data: 3,
-            color: "#85d0f6"
+            color: "#0398ab59"
         }, {
             label: "Sales 3",
             data: 15,
-            color: "#5bc3f8"
+            color: "#0398aba6"
         }, {
             label: "Sales 4",
             data: 52,
-            color: "#01a8fe"
+            color: "#0398AB"
         }];
 
     var plotObj = $.plot($("#flot-pie-chart"), data, {
@@ -239,7 +239,7 @@ $(function () {
                 return markings;
             }
         },
-        colors: ["#01a8fe"],
+        colors: ["#0398AB"],
         xaxis: {
              font: {
                 color: '#949ba2'

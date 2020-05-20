@@ -43,7 +43,7 @@ HEADER STYLE
     display: inline-block;
 }
 .yamm-content ul li a:hover{
-    color:#01a8fe;
+    color:#0398AB;
 }
 .yamm-content ul li:before{
         content: "\f105";
@@ -54,7 +54,7 @@ HEADER STYLE
     border: 0px;
     border-bottom: 0px;
     margin-bottom: 0px;
-    background-color:#01a8fe;
+    background-color:#0398AB;
 }
 navbar-default .navbar-nav>li>a {
     color: #848c94 !important;
@@ -139,7 +139,7 @@ navbar-default .navbar-nav>.open>a, navbar-default .navbar-nav>.open>a:focus, na
     border-left: 3px solid transparent;
 }
 .navbar-aside  .nav > li.active {
-    border-left: 3px solid #01a8fe;
+    border-left: 3px solid #0398AB;
     background: transparent;
 }
 .navbar-aside .nav-second-level.nav > li.active {
@@ -175,7 +175,7 @@ navbar-default .navbar-nav>.open>a, navbar-default .navbar-nav>.open>a:focus, na
     color:   #666;
 }
 .dropdown-menu>li>a:hover{
-    color:  #01a8fe;
+    color:  #0398AB;
     background-color: transparent;
 }
 
@@ -233,7 +233,7 @@ navbar-default .navbar-nav>.open>a, navbar-default .navbar-nav>.open>a:focus, na
     font-size: 13px;
 }
 .nav-header .dropdown-menu li a:hover{
-    color:  #01a8fe;
+    color:  #0398AB;
 }
 .nav-header .dropdown-menu{
     background: #fff;
@@ -404,7 +404,7 @@ body.body-small.mini-navbar #wrapper {
 }
 .search .fa-times{
       font-size: 18px;
-    color: #01a8fe;
+    color: #0398AB;
     position: absolute;
     right: 22px;
     top: 16px;
@@ -458,7 +458,7 @@ navbar-default .navbar-toggle {
 }
 .dropdown-lg li.notify-title{
     padding: 4px 20px;
-    color: #01a8fe;
+    color: #0398AB;
     padding-top:15px;
 }
 .dropdown-header{
@@ -553,7 +553,7 @@ navbar-default .navbar-toggle {
     color:#fff;
 }
 .yamm-content ul li a:hover {
-    color: #01a8fe;
+    color: #0398AB;
 }
 .yamm-content p{
     color: #fff;

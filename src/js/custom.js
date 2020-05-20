@@ -63,7 +63,7 @@ $('#world-map').vectorMap({
     backgroundColor: '#fff',
     regionStyle: {
         initial: {
-            fill: '#01a8fe',
+            fill: '#0398AB',
             "fill-opacity": 1,
             stroke: '#87c2e0',
             "stroke-width": 0,

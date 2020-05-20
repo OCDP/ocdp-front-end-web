@@ -18,7 +18,7 @@ $(function () {
         lineWidth: 4,
           gridTextColor: '#949ba2',
         labels: ['Value'],
-        lineColors: ['#01a8fe'],
+        lineColors: ['#0398AB'],
         pointSize: 5
     });
     
@@ -38,7 +38,7 @@ $(function () {
         hideHover: 'auto',
         resize: true,
           gridTextColor: '#949ba2',
-        lineColors: ['#67c5f6','#01a8fe']
+        lineColors: ['#addee4','#0398AB']
     });
     
     //bar charts
@@ -57,7 +57,7 @@ $(function () {
         hideHover: 'auto',
         resize: true,
           gridTextColor: '#949ba2',
-        barColors: ['#01a8fe', '#67c5f6']
+        barColors: ['#0398AB', '#addee4']
         
     });
 });

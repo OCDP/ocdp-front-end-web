@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from "react-router";
 import logo from "../../images/logo/logo_m.png";
 import apiFunc from '../../util/api';
 
@@ -12,6 +13,10 @@ class Login extends Component {
       perfil: ''
     };
     this.entrar = this.entrar.bind(this);
+  }
+
+  componentDidMount() {
+    localStorage.setItem("usuarioLogado", '');
   }
 
   async entrar(event) {
@@ -63,6 +68,8 @@ class Login extends Component {
                 this.setState({ nome: resp.data.nome });
                 this.setState({ perfil: resp.data });
                 localStorage.setItem("usuarioLogado", this.state)
+
+                this.props.history.push("/dashboard");
               });
 
           }
@@ -118,4 +125,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);

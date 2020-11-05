@@ -1,0 +1,11 @@
+@import "~styles/variables.less";
+
+.flow-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: calc(100vh - 64px);
+  & > .ant-menu {
+    flex: 1;
+  }
+}

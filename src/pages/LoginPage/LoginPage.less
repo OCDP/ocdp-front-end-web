@@ -1,0 +1,103 @@
+@import "~styles/typography.less";
+@import "~styles/variables.less";
+
+.background {
+  font-size: @font-size-small;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+
+  & > .login-form-wrapper {
+    background: var(--background-color-shade);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    & > .login-form {
+      padding: 32px 64px;
+      width: 450px;
+      transition: all 0.5s ease-out;
+
+      @media screen and (max-width: 700px) {
+        padding: 16px 32px;
+        width: 320px;
+
+        & > .login-form-header {
+          font-size: larger;
+        }
+      }
+
+      & > .login-form-header {
+        font-size: large;
+        color: var(--primary-color);
+        text-align: center;
+        padding: 16px;
+      }
+
+      &
+        > .ant-form-item
+        > .ant-form-item-control
+        > .ant-form-item-control-input
+        > .ant-form-item-control-input-content {
+        & > input,
+        & > .ant-input-password > input {
+          font-size: medium;
+        }
+
+        & > .ant-input-password {
+          padding: 0 10px 0 0 !important;
+        }
+      }
+
+      .login-action {
+        width: 100%;
+        font-size: medium;
+      }
+
+      .password-recovery-action {
+        width: 100%;
+        text-align: center;
+        bottom: 12px;
+      }
+    }
+
+    .separator {
+      width: 1px;
+      height: 60%;
+      background-color: #212121;
+    }
+
+    .illustration {
+      padding: 32px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
+
+      & > img {
+        width: 200px;
+      }
+    }
+  }
+}
+
+.copyright {
+  color: var(--primary-color);
+  width: 100%;
+  text-align: center;
+}
+
+.logomarca {
+  width: 100%;
+  text-align: center;
+}

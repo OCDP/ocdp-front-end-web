@@ -1,0 +1,15 @@
+@import "~styles/variables.less";
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+
+  &,
+  & > .menu-wrapper > .ant-menu,
+  & > .menu-wrapper > .ant-menu-item {
+    background-color: darken(@background-color, 12%);
+  }
+}

@@ -1,0 +1,1 @@
+export default ["png", "jpg", "zip", "pdf", "doc", "docx"];

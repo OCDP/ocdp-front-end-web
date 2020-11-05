@@ -1,0 +1,223 @@
+@import "~antd/lib/style/themes/dark.less";
+@import "~antd/dist/antd.dark.less";
+@import "./typography.less";
+@import "./variables.less";
+
+:root {
+  --primary-color-original: @primary-color;
+  --primary-color: @primary-color;
+  --secondary-color: @secondary-color;
+  --primary-color-shade: @primary-color-shade;
+  --danger-color: @danger-color;
+  --success-color: @success-color;
+  --background-color: @background-color;
+  --radius: 6px;
+
+  --navigator-size: 120px;
+  --navigator-size-small: 100px;
+  --dashboard-card-size: 60vh;
+  --shadow: 0 0 24px 0 #00000015;
+  --page-container-height: calc(100vh - 136px);
+}
+
+@font-face {
+  font-family: "MontSerrat";
+  src: url("../assets/fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MontSerrat";
+  src: url("../assets/fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: MontSerrat;
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--primary-color-shade) !important;
+    opacity: 0.4 !important;
+    margin: 3px !important;
+    border-radius: var(--radius) !important;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px !important;
+    height: 8px !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: var(--radius) !important;
+    background-image: linear-gradient(
+      180deg,
+      @primary-color,
+      darken(@primary-color, 20%)
+    ) !important;
+  }
+}
+
+#root {
+  height: 100%;
+  font-size: @font-size-base;
+}
+
+// OVERRIDES
+.ant-modal-content {
+  border-radius: var(--radius) !important;
+
+  & > .ant-modal-header {
+    border-radius: var(--radius) 10px 0 0 !important;
+  }
+}
+
+.ant-input,
+.ant-input-password,
+.ant-input-number,
+.ant-input-search,
+.ant-picker,
+button:not(.ant-btn-circle):not(.ant-switch),
+.ant-select-selector,
+.ant-card,
+.ant-collapse,
+.ant-tag,
+.ant-popover::after,
+.ant-popover > .ant-popover-content > .ant-popover-inner {
+  border-radius: var(--radius) !important;
+
+  .ant-input {
+    border-radius: 4px !important;
+  }
+
+  .ant-collapse-item:last-child {
+    border-radius: var(--radius) !important;
+  }
+
+  font-size: @font-size-small;
+}
+
+.ant-input,
+.ant-input-password,
+.ant-input-search,
+.ant-picker {
+  padding: 0.4em 0.8em !important;
+}
+
+.ant-radio-group {
+  font-size: @font-size-small;
+
+  .ant-radio-button-wrapper {
+    padding: 0.05rem 0.5rem;
+
+    &:last-child {
+      border-top-right-radius: var(--radius) !important;
+      border-bottom-right-radius: var(--radius) !important;
+    }
+    &:first-child {
+      border-top-left-radius: var(--radius) !important;
+      border-bottom-left-radius: var(--radius) !important;
+    }
+  }
+}
+
+.ant-btn-default {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.ant-input,
+.ant-input-password,
+.ant-input-search,
+.ant-picker,
+.ant-input-number,
+.ant-radio-button-wrapper {
+  border-color: var(--primary-color);
+}
+
+.ant-select-selector {
+  border-color: var(--primary-color) !important;
+}
+
+.ant-form-item-explain {
+  margin-top: unset !important;
+  margin-bottom: unset !important;
+  margin-left: 10px !important;
+  font-size: @font-size-small !important;
+}
+
+.ant-card-head-title > div > button.ant-btn {
+  font-size: @font-size-small !important;
+}
+
+label,
+.ant-form-item-label {
+  font-size: @font-size-small !important;
+}
+
+.ant-popover-message-title {
+  padding-left: 24px !important;
+}
+
+.ant-typography-expand {
+  visibility: hidden;
+  position: relative;
+
+  &::after {
+    content: "ver mais";
+    visibility: visible;
+    color: @primary-color;
+  }
+}
+
+.modal-usar-aqui {
+  .ant-modal-header,
+  .ant-modal-footer {
+    border: unset !important;
+  }
+}
+
+ul.listagem-padrao,
+article.drag-list {
+  list-style: unset;
+
+  li.listagem-padrao-item,
+  div.drag-item {
+    display: flex;
+    width: 100%;
+    padding: 8px;
+    padding-right: 16px;
+    margin: 4px 0;
+    background-color: #eee1;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      background-color: #eee3;
+      opacity: 0.7;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 1 !important;
+    }
+
+    & > div {
+      flex: 1;
+      display: flex;
+      margin-left: 16px;
+    }
+  }
+}
+
+.ant-skeleton-title {
+  margin: unset !important;
+}

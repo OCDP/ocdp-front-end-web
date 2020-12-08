@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const lessToJs = require("less-vars-to-js");
 const AntDesignThemePlugin = require("antd-theme-webpack-plugin");
-const darkTheme = require("@ant-design/dark-theme");
+// const darkTheme = require("@ant-design/dark-theme");
 const MonacoEditorWebpackPlugin = require("monaco-editor-webpack-plugin");
 
 const {
@@ -33,6 +33,6 @@ module.exports = override(
   addWebpackPlugin(new MonacoEditorWebpackPlugin()),
   addLessLoader({
     javascriptEnabled: true,
-    modifyVars: { ...variables, ...darkTheme.default },
+    modifyVars: { ...variables },
   })
 );

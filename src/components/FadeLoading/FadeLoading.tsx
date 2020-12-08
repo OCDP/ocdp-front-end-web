@@ -1,7 +1,8 @@
 import React from "react";
 import "./FadeLoading.less";
 
-import { LoadingOutlined } from "@ant-design/icons";
+import { mdiLoading } from "@mdi/js";
+import MaterialIcon from "icons/MaterialIcon";
 
 interface Props {
   loading: boolean;
@@ -12,7 +13,7 @@ export default function ({ loading, message, dark }: Props) {
   if (loading) {
     return (
       <section className={`fade-loading ${dark ? "dark" : ""}`}>
-        <LoadingOutlined className="loading" />
+        <MaterialIcon path={mdiLoading} spin className="loading" />
         <div className="message">{message}</div>
       </section>
     );

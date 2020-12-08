@@ -3,7 +3,6 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import PrivateRoute from "hocs/PrivateRoute";
 
 const BotsPage = React.lazy(() => import("pages/BotsPage"));
-const EditorSwitcher = React.lazy(() => import("routes/EditorSwitcher"));
 const DashboardPage = React.lazy(() => import("pages/DashboardPage"));
 const SettingsPage = React.lazy(() => import("pages/SettingsPage"));
 const IntentionsPage = React.lazy(() => import("pages/IntentionsPage"));
@@ -20,11 +19,6 @@ const PagesSwitcher: React.FC = () => {
         lazy
         path="/p/bots/:id_bot/"
         component={DashboardPage}
-      />
-      <PrivateRoute
-        lazy
-        path="/p/bots/:id_bot/editor"
-        component={EditorSwitcher}
       />
       <PrivateRoute
         exact

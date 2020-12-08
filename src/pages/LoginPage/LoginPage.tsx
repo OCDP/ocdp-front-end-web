@@ -4,7 +4,7 @@ import "./LoginPage.less";
 import { Form, Input, Button } from "antd";
 import copyright from "utils/copyright";
 import { useHistory } from "react-router-dom";
-import { usePostLogin } from "hooks/networking/auth";
+// import { usePostLogin } from "hooks/networking/auth";
 import handleApiError from "utils/feedback/handleApiError";
 import SobreVidas from "icons/SobreVidas";
 
@@ -13,13 +13,13 @@ const conpyrightLabel = copyright();
 const LoginPage: React.FC = () => {
   const history = useHistory();
   const [form] = Form.useForm();
-  const postLogin = usePostLogin();
+  // const postLogin = usePostLogin();
 
   const _postLogin = useCallback(
     async (values: any) => {
       try {
-        const { data } = await postLogin(values);
-        console.log(JSON.stringify(data));
+        // const { data } = await postLogin(values);
+        // console.log(JSON.stringify(data));
         history.replace("/p/bots");
       } catch (err) {
         handleApiError({
@@ -28,7 +28,7 @@ const LoginPage: React.FC = () => {
         });
       }
     },
-    [history, postLogin]
+    [history]
   );
 
   return (

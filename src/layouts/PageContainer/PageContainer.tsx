@@ -94,8 +94,7 @@ const PageContainer: React.FC<Props> = ({
           </Popover>
         </Space>
       </Layout.Header>
-
-      {children}
+      <div style={{ margin: 16 }}>{children}</div>
     </Layout>
   );
 };
